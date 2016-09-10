@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.nicholas.wwtpApplication.Data"
+    android:background="#99FFCC">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pH Level:"
+        android:id="@+id/textView29"
+        android:textSize="25dp"
+        android:textColor="#6666CC"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:id="@+id/currentPHBar"
+        android:progress="0"
+        android:secondaryProgress="0"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView29"
+        android:indeterminate="false"
+        android:max="1400" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DO Level:"
+        android:id="@+id/textView30"
+        android:textSize="25dp"
+        android:textColor="#6666CC"
+        android:layout_below="@+id/currentPHBar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:id="@+id/doBar"
+        android:progress="0"
+        android:secondaryProgress="0"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView30"
+        android:indeterminate="false"
+        android:max="1000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORP Level"
+        android:id="@+id/waterInfo"
+        android:textSize="25dp"
+        android:textColor="#6666CC"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/doBar"
+        android:layout_marginTop="20dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:id="@+id/orpBar"
+        android:progress="0"
+        android:secondaryProgress="0"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/waterInfo"
+        android:indeterminate="false"
+        android:max="18000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flow Level:"
+        android:id="@+id/textView32"
+        android:textSize="25dp"
+        android:textColor="#6666CC"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/orpBar"
+        android:layout_marginTop="20dp"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:id="@+id/flowBar"
+        android:progress="0"
+        android:secondaryProgress="0"
+        android:layout_below="@+id/textView32"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false"
+        android:max="2000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water Level:"
+        android:id="@+id/textView33"
+        android:textSize="25dp"
+        android:textColor="#6666CC"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/flowBar"
+        android:layout_marginTop="20dp"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:id="@+id/waterBar"
+        android:progress="0"
+        android:secondaryProgress="0"
+        android:layout_below="@+id/textView33"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false"
+        android:max="5" />
+
+    <TextView
+        android:id="@+id/phLvl"
+        android:text="#pH Value"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView29"
+        android:layout_alignRight="@+id/currentPHBar"
+        android:layout_alignEnd="@+id/currentPHBar" />
+
+    <TextView
+        android:id="@+id/doLvl"
+        android:text="#DO Value"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView30"
+        android:layout_alignLeft="@+id/phLvl"
+        android:layout_alignStart="@+id/phLvl" />
+
+    <TextView
+        android:id="@+id/orpLvl"
+        android:text="#ORP Value"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/orpBar"
+        android:layout_alignRight="@+id/orpBar"
+        android:layout_alignEnd="@+id/orpBar" />
+
+    <TextView
+        android:id="@+id/flowLvl"
+        android:text="#Flow Value"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView32"
+        android:layout_alignRight="@+id/flowBar"
+        android:layout_alignEnd="@+id/flowBar" />
+
+    <TextView
+        android:id="@+id/waterLvl"
+        android:text="#WL Value"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/waterBar"
+        android:layout_alignRight="@+id/waterBar"
+        android:layout_alignEnd="@+id/waterBar" />
+
+</RelativeLayout>

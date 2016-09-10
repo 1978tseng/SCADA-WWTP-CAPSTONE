@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#99FFCC">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:text="Additional Sensor Data"
+        android:textSize="20sp"
+        android:textColor="#66CC33"
+        android:id="@+id/dataButton"
+        android:background="#CCFFFF"
+        android:onClick="dataScreen"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/powellshelves3"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pH:"
+        android:id="@+id/textView20"
+        android:textSize="25dp"
+        android:textColor="#6666CC"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/phInfo"
+        android:text="#pH"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView24"
+        android:layout_toRightOf="@+id/textView20"
+        android:layout_toEndOf="@+id/textView24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DO:"
+        android:id="@+id/textView22"
+        android:textSize="25dp"
+        android:textColor="#6666CC"
+        android:layout_toRightOf="@+id/phInfo"
+        android:layout_marginLeft="60dp"
+        />
+
+    <TextView
+        android:id="@+id/doInfo"
+        android:text="#DO"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView22"
+        android:layout_toEndOf="@+id/textView26" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Water Level:"
+        android:id="@+id/textView29"
+        android:textSize="20dp"
+        android:textColor="#6666CC"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/doInfo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/textView26" />
+
+    <TextView
+        android:id="@+id/waterInfo"
+        android:text="#WL"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView29"
+        android:layout_alignRight="@+id/dataButton"
+        android:layout_alignEnd="@+id/dataButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORD:"
+        android:id="@+id/textView24"
+        android:textSize="25dp"
+        android:textColor="#6666CC"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView20"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/orpInfo"
+        android:text="#ORP"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_toRightOf="@+id/textView24"
+        android:layout_toEndOf="@+id/textView24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flow:"
+        android:id="@+id/textView26"
+        android:textSize="25dp"
+        android:textColor="#6666CC"
+        android:layout_toRightOf="@+id/orpInfo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_below="@+id/doInfo"/>
+
+    <TextView
+        android:id="@+id/flowInfo"
+        android:text="#Flow"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textView26"
+        android:layout_alignBottom="@+id/textView26"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/greencircle"
+        android:alpha="1"
+        android:id="@+id/pumpImg"
+        android:background="@android:color/transparent"
+        android:layout_above="@+id/dataButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="44dp" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/redcircle"
+        android:alpha="1"
+        android:id="@+id/solImg"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/textView28"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pump:"
+        android:id="@+id/textView27"
+        android:textSize="20dp"
+        android:textColor="#6666CC"
+        android:layout_above="@+id/pumpImg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="solenoid:"
+        android:id="@+id/textView28"
+        android:textSize="20dp"
+        android:textColor="#6666CC"
+        android:layout_below="@+id/waterInfo"
+        android:layout_toRightOf="@+id/flowInfo"
+        android:layout_toEndOf="@+id/flowInfo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#status"
+        android:id="@+id/solInfo"
+        android:textSize="20dp"
+        android:textColor="#6666CC"
+        android:layout_below="@+id/solImg"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#status"
+        android:id="@+id/pumpInfo"
+        android:textSize="20dp"
+        android:textColor="#6666CC"
+        android:layout_above="@+id/dataButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
